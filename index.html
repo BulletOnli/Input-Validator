@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form onsubmit="return false">
+        <div class="formcontainer">
+            <input type="text" id="inputUsername" placeholder="Input username" autocomplete="off" oninput="checkUsername()">
+            <input type="password" id="inputPassword" placeholder="Input Password" oninput="checkPassword()">
+            <div class="container">
+                <p class="errorMessage">Invalid Password!</p>
+                <div class="showPasswordContainer">
+                    <input type="checkbox" id="showPassword" oninput="checkbox()">
+                    <label for="showPassword">Show Password</label>
+                </div>
+            </div>
+            <button id="submitBtn">Submit</button>
+        </div>
+        <div class="errorContainer">
+            <p class="requirements">Error:</p>
+            <p class="validOne">- Username must be less than 10 Characters</p>
+            <p class="validTwo">- Password shouldn't contain Special Characters</p>
+            <p class="validThree">- Password must contain Capital Letter</p>
+            <p class="validFour">- Password must contain numbers</p>
+            
+        </div>
+    </form>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
